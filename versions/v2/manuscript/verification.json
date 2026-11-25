@@ -1,0 +1,181 @@
+{
+  "arithmetic": "exact integers",
+  "coefficient_constructions": [
+    "triangular recurrence",
+    "integral compositional square root"
+  ],
+  "coefficients_sha256": "438bc28bd8b4ef91699ce5e4ba2a3bc93f2d390047dc09eb1ec5f68585114627",
+  "companion_root_and_inverse_parity": true,
+  "companion_square_signs_and_valuations": true,
+  "constructions_agree": true,
+  "degree": 80,
+  "displayed_companion_coefficients": 54,
+  "displayed_sequence_terms": 21,
+  "even_index_divisibility_by_three": true,
+  "even_index_modulo_six_classification": true,
+  "even_index_modulus": 6,
+  "even_index_residue_classification": true,
+  "first_negative_index": 58,
+  "first_negative_value": -26905723968834800610202487574927096205887865973475629777757031642008,
+  "functional_identities_1_to_6": true,
+  "modulo_six_exclusion": true,
+  "parameter": 5,
+  "parameter_family": {
+    "samples": [
+      {
+        "arithmetic": "exact integers",
+        "coefficient_constructions": [
+          "triangular recurrence",
+          "integral compositional square root"
+        ],
+        "coefficients_sha256": "fbc51fa8435fbd91738beb1fad6e33a7b4efd71f1f3e20208552e008d6149983",
+        "companion_root_and_inverse_parity": true,
+        "constructions_agree": true,
+        "degree": 24,
+        "even_index_modulus": 10,
+        "even_index_residue_classification": true,
+        "functional_identities_1_to_6": true,
+        "parameter": -11,
+        "parity_power_of_two": true
+      },
+      {
+        "arithmetic": "exact integers",
+        "coefficient_constructions": [
+          "triangular recurrence",
+          "integral compositional square root"
+        ],
+        "coefficients_sha256": "0f20df9b445593d4a56a777de53483b13dd72aae7adacb21a95d4841edb516a2",
+        "companion_root_and_inverse_parity": true,
+        "constructions_agree": true,
+        "degree": 24,
+        "even_index_modulus": 6,
+        "even_index_residue_classification": true,
+        "functional_identities_1_to_6": true,
+        "parameter": -7,
+        "parity_power_of_two": true
+      },
+      {
+        "arithmetic": "exact integers",
+        "coefficient_constructions": [
+          "triangular recurrence",
+          "integral compositional square root"
+        ],
+        "coefficients_sha256": "da4440e522e7ada33cfb23ab3f9760b79c962ac975793abe4ad6b89aef30bdd7",
+        "companion_root_and_inverse_parity": true,
+        "constructions_agree": true,
+        "degree": 24,
+        "even_index_modulus": 2,
+        "even_index_residue_classification": true,
+        "functional_identities_1_to_6": true,
+        "parameter": -3,
+        "parity_power_of_two": true
+      },
+      {
+        "arithmetic": "exact integers",
+        "coefficient_constructions": [
+          "triangular recurrence",
+          "integral compositional square root"
+        ],
+        "coefficients_sha256": "f28df35983bfd4f1f785e9a1fb565b6f20251443971058c2eabe5118967feaac",
+        "companion_root_and_inverse_parity": true,
+        "constructions_agree": true,
+        "degree": 24,
+        "even_index_modulus": 2,
+        "even_index_residue_classification": true,
+        "functional_identities_1_to_6": true,
+        "parameter": 1,
+        "parity_power_of_two": true
+      },
+      {
+        "arithmetic": "exact integers",
+        "coefficient_constructions": [
+          "triangular recurrence",
+          "integral compositional square root"
+        ],
+        "coefficients_sha256": "5674ef27c98d4c020cf99755234bd285fe6cacefaf156a695b071af9ef934931",
+        "companion_root_and_inverse_parity": true,
+        "companion_square_signs_and_valuations": true,
+        "constructions_agree": true,
+        "degree": 24,
+        "displayed_companion_coefficients": 54,
+        "displayed_sequence_terms": 21,
+        "even_index_divisibility_by_three": true,
+        "even_index_modulo_six_classification": true,
+        "even_index_modulus": 6,
+        "even_index_residue_classification": true,
+        "first_negative_index": null,
+        "first_negative_value": null,
+        "functional_identities_1_to_6": true,
+        "modulo_six_exclusion": true,
+        "parameter": 5,
+        "parity_power_of_two": true
+      },
+      {
+        "arithmetic": "exact integers",
+        "coefficient_constructions": [
+          "triangular recurrence",
+          "integral compositional square root"
+        ],
+        "coefficients_sha256": "f0945df6c6f8433958c3dc7d5a2bf81fa1c1a25cc48f83bd6223493e299f7f6f",
+        "companion_root_and_inverse_parity": true,
+        "constructions_agree": true,
+        "degree": 24,
+        "even_index_modulus": 10,
+        "even_index_residue_classification": true,
+        "functional_identities_1_to_6": true,
+        "parameter": 9,
+        "parity_power_of_two": true
+      },
+      {
+        "arithmetic": "exact integers",
+        "coefficient_constructions": [
+          "triangular recurrence",
+          "integral compositional square root"
+        ],
+        "coefficients_sha256": "c761b50a975d4401bbfe698723759b6869a542c3134f076062cae4df2dfe621b",
+        "companion_root_and_inverse_parity": true,
+        "constructions_agree": true,
+        "degree": 24,
+        "even_index_modulus": 14,
+        "even_index_residue_classification": true,
+        "functional_identities_1_to_6": true,
+        "parameter": 13,
+        "parity_power_of_two": true
+      },
+      {
+        "arithmetic": "exact integers",
+        "coefficient_constructions": [
+          "triangular recurrence",
+          "integral compositional square root"
+        ],
+        "coefficients_sha256": "a1eb7e37b5faf2d9bc365bf836c03befa0b62cbaaa1ea869ddf683b0c6092f92",
+        "companion_root_and_inverse_parity": true,
+        "constructions_agree": true,
+        "degree": 24,
+        "even_index_modulus": 18,
+        "even_index_residue_classification": true,
+        "functional_identities_1_to_6": true,
+        "parameter": 17,
+        "parity_power_of_two": true
+      },
+      {
+        "arithmetic": "exact integers",
+        "coefficient_constructions": [
+          "triangular recurrence",
+          "integral compositional square root"
+        ],
+        "coefficients_sha256": "6f9b03873120a2a5103e2a2301f09260afe437b69647b21a381b9059b3be4afb",
+        "companion_root_and_inverse_parity": true,
+        "constructions_agree": true,
+        "degree": 24,
+        "even_index_modulus": 22,
+        "even_index_residue_classification": true,
+        "functional_identities_1_to_6": true,
+        "parameter": 21,
+        "parity_power_of_two": true
+      }
+    ],
+    "through_degree": 24
+  },
+  "parity_power_of_two": true
+}

@@ -1,0 +1,278 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\ord}{\operatorname{ord}}
+\title{Proof of the modulo-six and parity conjectures in OEIS A378258, Comments}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove both conjectures in Paul D. Hanna's OEIS A378258, Comments (3 December 2024) \cite{hanna}: its coefficients avoid residues $1$ and $5$ modulo $6$ beyond degree one, and an odd coefficient occurs exactly at a power-of-two index. The normalized rational solution exists, is unique and has integer coefficients. An integral compositional square root gives parity; reflection modulo $3$ gives the sharper even-index residues $3$ at powers of two and $0$ otherwise. The same construction treats every integer parameter $q\equiv1\pmod4$ replacing $5$, and gives companion-series parity and exact dyadic valuations for compositional squares.
+\end{abstract}
+
+\section{The source question and statement}
+Hanna's A378258, Comments, poses the modulo-six exclusion and the power-of-two parity criterion \cite{hanna}. The entry defines
+\begin{equation}\label{system}
+ A=B+5A^2,\qquad B\circ(A-A^2)=x,
+ \qquad A=x+O(x^2),\quad A,B\in\Q[[x]].
+\end{equation}
+Throughout, products and powers without $\circ$ are ordinary products of formal series; $(f\circ g)(x)=f(g(x))$. Every composition below has an inner series with zero constant coefficient. We give a self-contained proof of the two conjectures and the stronger even-index congruence. The corresponding formal statements are the pinned declarations described in Section~\ref{coverage}.
+
+An earlier argument for the parity conjecture appears in
+hilbert-clavius \cite[item 5, 25 October 2026]{earlier-parity}, using the
+compositional square of $A-A^2$. The construction below uses the compositional
+square of $B$ and also gives the modulo-six conclusion. The classical Catalan
+valuation underlying the parity reduction is stated in
+Deutsch and Sagan \cite[Theorem 2.1]{deutsch-sagan}.
+
+\begin{theorem}\label{main}
+System~\eqref{system} has exactly one normalized solution $A=\sum_{n\geq1}a(n)x^n$, and all its coefficients are integers. For $n\geq1$,
+\[
+ a(n)\text{ is odd}\quad\Longleftrightarrow\quad n=2^j\text{ for some }j\geq0.
+\]
+For every even $n\geq2$, $3\mid a(n)$, and
+\[
+ a(n)\equiv
+ \begin{cases}3\pmod 6,&n\text{ is a power of two},\\
+ 0\pmod 6,&n\text{ is not a power of two}.
+ \end{cases}
+\]
+Consequently $a(n)\not\equiv1,5\pmod6$ for every $n>1$.
+\end{theorem}
+
+\section{Integral construction and parity}
+Let
+\[
+ C(x)=\sum_{n\geq1}\frac1n\binom{2n-2}{n-1}x^n
+       =x+C(x)^2
+\]
+be the Catalan series with zero constant coefficient; this is the offset-one series associated with A000108 \cite{catalan}. Its equation also constructs its integer coefficients recursively. The map $P(x)=x-x^2$ has compositional inverse $C$. More generally, any $x+O(x^2)$ over a commutative ring has a unique compositional inverse: the coefficient of degree $n$ in the inverse equation is the unknown coefficient plus an expression in lower coefficients. Thus a one-sided inverse is two-sided.
+
+\begin{lemma}\label{leading}
+Let $f,g\in x+x^2R[[x]]$ and suppose their first differing coefficient has degree $n$, so $f-g=\delta x^n+O(x^{n+1})$, $n\geq2$. Then
+\[
+ f\circ f-g\circ g=2\delta x^n+O(x^{n+1}).
+\]
+For fixed $s,t\in R$, the same leading difference occurs between
+$(f+sf^2)\circ(f+tf^2)$ and $(g+sg^2)\circ(g+tg^2)$.
+\end{lemma}
+\begin{proof}
+Both $f^2-g^2$ and every higher-order contribution from replacing an inner $x+O(x^2)$ series by one differing at degree $n$ start at degree $n+1$. The outer linear term contributes $\delta x^n$, and changing the outer series contributes a further $\delta x^n$. This proves both formulas. Whenever multiplication by $2$ is injective in $R$, either displayed expression therefore determines at most one normalized series. This includes every ring in which $2$ is a unit.
+\end{proof}
+
+\begin{lemma}\label{root}
+For every $H\in x^2\Z[[x]]$, there exists a unique $S\in x+x^2\Q[[x]]$ with
+\[
+ S\circ S=x+4H.
+\]
+It belongs to $\Z[[x]]$ and satisfies $S\equiv x\pmod2$.
+\end{lemma}
+\begin{proof}
+Construct successive integer polynomials $p=x+2q$, with $q\in x^2\Z[x]$, correct through degrees below $n$, starting with $p=x$, $n=2$. Since $q(x+2q)\equiv q(x)\pmod2$,
+\[
+ p\circ p-x=2q+2q(x+2q)\equiv0\pmod4.
+\]
+Hence the degree-$n$ coefficient $r$ of $p\circ p-x-4H$ is divisible by $4$. Replace $p$ by $p-(r/2)x^n$. Lemma~\ref{leading} shows that this cancels the degree-$n$ residual and leaves all lower degrees unchanged. The correction is even. Every coefficient eventually stabilizes, defining an integral $S\equiv x\pmod2$ satisfying the equation in every degree. Uniqueness over $\Q$ follows from Lemma~\ref{leading}.
+\end{proof}
+
+Apply Lemma~\ref{root} to $H=x-C$, which lies in $x^2\Z[[x]]$. Let $J=S^{\langle-1\rangle}$ be the compositional inverse and define
+\begin{equation}\label{construct}
+ S\circ S=5x-4C,\qquad A=C\circ J.
+\end{equation}
+Both $J$ and $A$ are integral. Substituting $J$ into $C-C^2=x$ gives
+\[
+ A-A^2=J.
+\]
+Also $C-5C^2=5x-4C=S\circ S$, so substituting $J$ gives
+\[
+ A-5A^2=(S\circ S)\circ J=S.
+\]
+Thus $B=S$ gives~\eqref{system}. Conversely, eliminating $B$ from any normalized rational solution gives
+\begin{equation}\label{eliminate}
+ (A-5A^2)\circ(A-A^2)=x.
+\end{equation}
+Lemma~\ref{leading}, with $s=-5,t=-1$ over $\Q$, proves uniqueness. This also establishes integrality for every normalized rational solution, not just for the construction.
+
+Modulo $2$, $S=x$, whence $J=x$ and $A=C$. In $\F_2[[x]]$ the equation $C=x+C^2$ reads $C(x)=x+C(x^2)$. Its degree-one coefficient is $1$, every odd degree greater than one has coefficient $0$, and the coefficient at $2m$ equals that at $m$. Repeatedly dividing the index by $2$ proves the parity assertion of Theorem~\ref{main}. This is the classical Catalan parity criterion with the index shifted by one; see Deutsch and Sagan \cite[Theorem 2.1 and its immediate corollary]{deutsch-sagan}.
+
+\section{Reflection modulo three}
+Reduce~\eqref{eliminate} coefficientwise modulo $3$ and write $f\in\F_3[[x]]$ for the reduction of $A$. Then
+\begin{equation}\label{pair}
+ V\circ U=x,\qquad U=f-f^2,\quad V=f+f^2.
+\end{equation}
+The two series are normalized, so $U\circ V=x$ as well. Put $r(x)=-x$ and $g=r\circ f\circ r=-f(-x)$. Direct substitution gives
+\[
+ g+g^2=r\circ U\circ r,\qquad
+ g-g^2=r\circ V\circ r.
+\]
+Consequently
+\[
+ (g+g^2)\circ(g-g^2)
+   =r\circ U\circ V\circ r=x.
+\]
+By Lemma~\ref{leading} with $s=1,t=-1$, there is at most one normalized solution of~\eqref{pair} over $\F_3$, because $2\ne0$. Therefore $g=f$, or $f(x)=-f(-x)$. At every even degree its coefficient is its own negative; since $2$ is invertible in $\F_3$, that coefficient vanishes. Thus $3\mid a(n)$ for every even $n$.
+
+For even $n\geq2$, combine this divisibility with the parity already proved: a multiple of $3$ is $3$ modulo $6$ if odd and $0$ modulo $6$ if even. If $n>1$ is odd, it is not a power of two, so $a(n)$ is even, excluding residues $1$ and $5$ there too. This completes the proof of Theorem~\ref{main}.
+
+\section{Companion series and a parameter family}
+The entry lists six functional identities. All follow from the same construction. Besides~\eqref{system}, one has
+\begin{align*}
+ A&=C(5B)/5,& A\circ(A-A^2)&=C(5x)/5,\\
+ A&=C(A-A^2),& A\circ B&=C,\\
+ B\circ B&=5x-4C.
+\end{align*}
+For the first identity, invert $y\mapsto y-5y^2$ in $A-5A^2=B$. For the second, compose that equation with $A-A^2$ and use $B\circ(A-A^2)=x$. The third is $A=C\circ J$, since $J=A-A^2$. The fourth follows from $(C\circ J)\circ S=C$, and the fifth is~\eqref{construct}. These arguments justify the identities in all degrees, with the offset-one convention for $C$.
+
+Put $D=C(5x)/5$, $J=A-A^2$, and $c_n=[x^n]C$. Write $s_2(n)$ for
+the number of ones in the binary expansion of $n$, and $v_2(z)$ for the
+exponent of $2$ in a nonzero integer $z$.
+
+\begin{corollary}\label{companions}
+The related series in A378258, Examples, satisfy
+\[
+ B\equiv J\equiv x\pmod2,\qquad
+ A^2\equiv C-x\pmod2,\qquad D\equiv C\pmod2.
+\]
+Thus every coefficient of $B$ or $J$ beyond degree one is even; the odd
+coefficients of $A^2$ occur exactly at $2,4,8,\ldots$, and those of $D$
+occur exactly at $1,2,4,8,\ldots$. Moreover, for every $n\geq2$,
+\begin{align*}
+ [x^n](B\circ B)&=-4c_n<0,&
+ [x^n](J\circ J)&=4\cdot5^{n-2}c_n>0,\\
+ v_2([x^n](B\circ B))&=s_2(n)+1,&
+ v_2([x^n](J\circ J))&=s_2(n)+1.
+\end{align*}
+\end{corollary}
+\begin{proof}
+The construction gives $B\equiv J\equiv x\pmod2$ and $A\equiv C\pmod2$;
+use $C^2=C-x$ and the oddness of $5$ for the other reductions.
+Since $A\circ J=D$ and $D=x+5D^2$,
+\[
+ J\circ J=(A-A^2)\circ J=D-D^2=x+4D^2.
+\]
+Together with $B\circ B=5x-4C$ and
+$[x^n]D^2=5^{n-2}c_n$ for $n\geq2$, this proves the coefficient formulas
+and signs. For completeness, $v_2(r!)=r-s_2(r)$ follows by counting
+multiples of $2,4,8,\ldots$ in $r!$. Applying it to
+$c_n=(2n-2)!/(n!(n-1)!)$ gives
+\[
+ v_2(c_n)=-1-s_2(2n-2)+s_2(n)+s_2(n-1)=s_2(n)-1.
+\]
+This is the shifted Catalan valuation in \cite[Theorem 2.1]{deutsch-sagan}.
+Multiplication by $4$ proves both displayed valuations.
+\end{proof}
+
+\begin{corollary}\label{family}
+Let $t\in\Z$, $q=1+4t$, and $M=|2t+1|$. The system
+\[
+ A_q=B_q+qA_q^2,\qquad B_q\circ(A_q-A_q^2)=x,
+ \qquad A_q=x+O(x^2)
+\]
+has a unique normalized rational solution, with integer coefficients
+$a_q(n)=[x^n]A_q$. Its odd coefficients occur exactly at powers of two.
+At every even $n\geq2$,
+\[
+ a_q(n)\equiv
+ \begin{cases}M\pmod{2M},&n\text{ is a power of two},\\
+ 0\pmod{2M},&n\text{ is not a power of two}.
+ \end{cases}
+\]
+In particular, $M\mid a_q(n)$ at every even index. At odd $n>1$ the
+coefficient is even. All six source identities extend with $5$ replaced
+by $q$, with $B_q\circ B_q=qx+(1-q)C$.
+\end{corollary}
+\begin{proof}
+Lemma~\ref{root}, applied to $H=t(x-C)$, constructs an integral
+$S_q\equiv x\pmod2$ with
+\[
+ S_q\circ S_q=qx+(1-q)C=C-qC^2.
+\]
+Set $J_q=S_q^{\langle-1\rangle}$, $A_q=C\circ J_q$, $B_q=S_q$.
+Then $A_q-A_q^2=J_q$ and $A_q-qA_q^2=S_q$, as in~\eqref{construct}.
+Lemma~\ref{leading}, with scalars $-q$ and $-1$, gives uniqueness over $\Q$.
+Modulo $2$, $S_q=J_q=x$ and $A_q=C$, so the parity proof applies unchanged.
+
+The integer $M$ is positive and odd. If $M=1$ its divisibility assertion
+is automatic. Otherwise reduce the defining equation modulo $M$.
+Since $q\equiv-1\pmod M$, it becomes
+$(f+f^2)\circ(f-f^2)=x$. Reflection swaps the inverse pair exactly as in
+Section 3. Multiplication by $2$ is invertible in $\Z/M\Z$, even when
+$M$ is composite; Lemma~\ref{leading} therefore gives $f=-f(-x)$.
+Hence every even-indexed coefficient is divisible by $M$.
+Because $M$ is odd, combining this with parity gives the residues modulo
+$2M$. Finally, $q\ne0$; inversion of $y-qy^2$, or the same substitutions
+used above, gives the six identities with $C(qx)/q$ in place of $D$.
+\end{proof}
+
+The value $t=1$ recovers $q=5$, $M=3$ and Theorem~\ref{main}.
+The case $t=0$ gives $A_1=C$ and $B_1=x$.
+
+\section{Source coverage and verification scope}\label{coverage}
+
+\begin{center}
+\small
+\begin{tabular}{p{.48\linewidth}p{.42\linewidth}}
+\toprule
+A378258 source item & Coverage\\
+\midrule
+Comments: modulo-six conjecture & Proved: Theorem~\ref{main}, all $n>1$.\\
+Comments: power-of-two parity conjecture & Proved: Theorem~\ref{main}, all $n\geq1$; earlier parity argument \cite[item 5]{earlier-parity}.\\
+Comments: first negative term at $58$ & Proved by a finite check of every $a(n)$ for $1\leq n\leq58$.\\
+Formulas (1)--(6); Name & Proved: identities above in every degree.\\
+Examples: $A^2$, $A-A^2$, $B$, $C(5x)/5$ & Proved: companion parity in Corollary~\ref{companions}; every displayed coefficient checked.\\
+Examples: $B\circ B$; companion $J\circ J$ & Proved: exact coefficients, signs and valuations in Corollary~\ref{companions}.\\
+Cross-reference A000108: equation, parity and dyadic valuation & Prior proof cited \cite[Theorem 2.1]{deutsch-sagan}; deductions above use the offset-one convention.\\
+PARI recurrence; displayed $A$ terms; linked b-file & Proved: triangular recurrence below; finite agreement through degree $80$ with the b-file.\\
+Other questions in A000108 & Not covered; no general assertion about the unrelated Catalan literature.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The accompanying \texttt{verify.py} computes through degree $80$ by two exact constructions: the triangular recurrence
+\[
+ a(n)=\frac{5^{n-1}\frac1n\binom{2n-2}{n-1}
+ -[x^n]P_n(P_n-P_n^2)}2,\qquad
+ P_n=\sum_{1\leq k<n}a(k)x^k,
+\]
+and the integral square-root construction~\eqref{construct}. The degree-$n$
+unknown has coefficient $2$ by Lemma~\ref{leading}; this proves the recurrence
+and its agreement with the entry's PARI program.
+The checker tests equality of the two constructions, all six identities, the
+companion-series conclusions and the stated congruences through degree $80$.
+It also compares all $21$ displayed sequence terms and every displayed
+companion-series coefficient. The first eight values are
+\[
+ 1,\ 3,\ 22,\ 219,\ 2530,\ 31830,\ 422652,\ 5820099,
+\]
+and the first negative index is $58$. A further exact comparison tests both
+constructions and all six generalized identities through degree $24$ for
+$t=-3,-2,\ldots,5$, including composite $M=9$.
+These finite checks supplement the all-degree proofs; Corollary~\ref{family}
+applies to every integer $t$, not just this finite set.
+
+Two pinned Lean source files express the corresponding all-degree statements. In
+\href{https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258ModSix.lean}{the modulo-six Lean source},
+the declaration \texttt{result} asserts existence and, for every rational series satisfying \texttt{IsGF}, an integer representative avoiding residues $1$ and $5$ modulo $6$ at every $n>1$. In
+\href{https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258SquareRootParity.lean}{the parity Lean source},
+\texttt{result} asserts existence and, for every such series and every $n\geq1$, integrality and oddness exactly when $n$ is a power of two. Under the common namespace \texttt{D5.S1.Recurrence.Invariants}, the respective namespaces are \texttt{HannaA378258ModSix} and \texttt{HannaA378258SquareRootParity}. Here \texttt{IsGF} means exactly zero constant coefficient, linear coefficient one, and existence of $B$ satisfying~\eqref{system}. The stronger even-index congruence, the functional identities and both corollaries have the written proofs above; the first-negative-index assertion has finite computational coverage. The two exported declarations have the original $q=5$ scope.
+
+\begin{thebibliography}{4}
+\bibitem{hanna} Paul D. Hanna, \emph{A378258: G.f. satisfies $A(x)=B(x)+5A(x)^2$ where $B(A(x)-A(x)^2)=x$}, The On-Line Encyclopedia of Integer Sequences, 3 December 2024. Name, Comments and Formulas (1)--(6). \url{https://oeis.org/A378258}.
+\bibitem{catalan} The OEIS Foundation Inc., \emph{A000108: Catalan numbers}, The On-Line Encyclopedia of Integer Sequences. Generating-function equation, with the offset-one series $C(x)=x+C(x)^2$. \url{https://oeis.org/A000108}.
+\bibitem{deutsch-sagan} Emeric Deutsch and Bruce E. Sagan, \emph{Congruences for Catalan and Motzkin numbers and related sequences}, arXiv:math/0407326v1 (2004), Section 2, Theorem 2.1. \url{https://arxiv.org/abs/math/0407326v1}.
+\bibitem{earlier-parity} hilbert-clavius, \emph{Fourteen open OEIS parity conjectures proved where the mod-2 reduction is degenerate}, OpenWitness, 25 October 2026, item 5 (A378258). \url{https://www.openwitness.net/p/10125}.
+\end{thebibliography}
+\medskip
+\noindent\textbf{License.} Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{document}

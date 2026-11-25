@@ -1,0 +1,214 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:oeis-a378258-hanna-mod-six:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "01b573fd9b691a4be3a8b0ecbb41b3311eda19b5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258ModSix.lean"
+      },
+      "lineage": "collected:oeis-a378258-hanna-mod-six:s1",
+      "macros": {
+        "\\F": "\\mathbb F",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a378258-hanna-mod-six",
+      "scope": "in_scope",
+      "statement": "System~\\eqref{system} has exactly one normalized solution $A=\\sum_{n\\geq1}a(n)x^n$, and all its coefficients are integers. For $n\\geq1$,\n\\[\n a(n)\\text{ is odd}\\quad\\Longleftrightarrow\\quad n=2^j\\text{ for some }j\\geq0.\n\\]\nFor every even $n\\geq2$, $3\\mid a(n)$, and\n\\[\n a(n)\\equiv\n \\begin{cases}3\\pmod 6,&n\\text{ is a power of two},\\\\\n 0\\pmod 6,&n\\text{ is not a power of two}.\n \\end{cases}\n\\]\nConsequently $a(n)\\not\\equiv1,5\\pmod6$ for every $n>1$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of the modulo-six and parity conjectures in OEIS A378258, Comments",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a378258-hanna-mod-six"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:oeis-a378258-hanna-mod-six:2:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "01b573fd9b691a4be3a8b0ecbb41b3311eda19b5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258ModSix.lean"
+      },
+      "lineage": "collected:oeis-a378258-hanna-mod-six:s2",
+      "macros": {
+        "\\F": "\\mathbb F",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a378258-hanna-mod-six",
+      "scope": "in_scope",
+      "statement": "Let $f,g\\in x+x^2R[[x]]$ and suppose their first differing coefficient has degree $n$, so $f-g=\\delta x^n+O(x^{n+1})$, $n\\geq2$. Then\n\\[\n f\\circ f-g\\circ g=2\\delta x^n+O(x^{n+1}).\n\\]\nFor fixed $s,t\\in R$, the same leading difference occurs between\n$(f+sf^2)\\circ(f+tf^2)$ and $(g+sg^2)\\circ(g+tg^2)$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of the modulo-six and parity conjectures in OEIS A378258, Comments",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a378258-hanna-mod-six"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:oeis-a378258-hanna-mod-six:2:s3",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "01b573fd9b691a4be3a8b0ecbb41b3311eda19b5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258ModSix.lean"
+      },
+      "lineage": "collected:oeis-a378258-hanna-mod-six:s3",
+      "macros": {
+        "\\F": "\\mathbb F",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a378258-hanna-mod-six",
+      "scope": "in_scope",
+      "statement": "For every $H\\in x^2\\Z[[x]]$, there exists a unique $S\\in x+x^2\\Q[[x]]$ with\n\\[\n S\\circ S=x+4H.\n\\]\nIt belongs to $\\Z[[x]]$ and satisfies $S\\equiv x\\pmod2$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of the modulo-six and parity conjectures in OEIS A378258, Comments",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a378258-hanna-mod-six"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:oeis-a378258-hanna-mod-six:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "01b573fd9b691a4be3a8b0ecbb41b3311eda19b5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258ModSix.lean"
+      },
+      "lineage": "collected:oeis-a378258-hanna-mod-six:s4",
+      "macros": {
+        "\\F": "\\mathbb F",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a378258-hanna-mod-six",
+      "scope": "in_scope",
+      "statement": "The related series in A378258, Examples, satisfy\n\\[\n B\\equiv J\\equiv x\\pmod2,\\qquad\n A^2\\equiv C-x\\pmod2,\\qquad D\\equiv C\\pmod2.\n\\]\nThus every coefficient of $B$ or $J$ beyond degree one is even; the odd\ncoefficients of $A^2$ occur exactly at $2,4,8,\\ldots$, and those of $D$\noccur exactly at $1,2,4,8,\\ldots$. Moreover, for every $n\\geq2$,\n\\begin{align*}\n [x^n](B\\circ B)&=-4c_n<0,&\n [x^n](J\\circ J)&=4\\cdot5^{n-2}c_n>0,\\\\\n v_2([x^n](B\\circ B))&=s_2(n)+1,&\n v_2([x^n](J\\circ J))&=s_2(n)+1.\n\\end{align*}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of the modulo-six and parity conjectures in OEIS A378258, Comments",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a378258-hanna-mod-six"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:oeis-a378258-hanna-mod-six:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "01b573fd9b691a4be3a8b0ecbb41b3311eda19b5",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258ModSix.lean"
+      },
+      "lineage": "collected:oeis-a378258-hanna-mod-six:s5",
+      "macros": {
+        "\\F": "\\mathbb F",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a378258-hanna-mod-six",
+      "scope": "in_scope",
+      "statement": "Let $t\\in\\Z$, $q=1+4t$, and $M=|2t+1|$. The system\n\\[\n A_q=B_q+qA_q^2,\\qquad B_q\\circ(A_q-A_q^2)=x,\n \\qquad A_q=x+O(x^2)\n\\]\nhas a unique normalized rational solution, with integer coefficients\n$a_q(n)=[x^n]A_q$. Its odd coefficients occur exactly at powers of two.\nAt every even $n\\geq2$,\n\\[\n a_q(n)\\equiv\n \\begin{cases}M\\pmod{2M},&n\\text{ is a power of two},\\\\\n 0\\pmod{2M},&n\\text{ is not a power of two}.\n \\end{cases}\n\\]\nIn particular, $M\\mid a_q(n)$ at every even index. At odd $n>1$ the\ncoefficient is even. All six source identities extend with $5$ replaced\nby $q$, with $B_q\\circ B_q=qx+(1-q)C$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Proof of the modulo-six and parity conjectures in OEIS A378258, Comments",
+      "toolchain": null,
+      "version": 2,
+      "work": "oeis-a378258-hanna-mod-six"
+    }
+  ]
+}

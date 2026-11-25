@@ -1,0 +1,27 @@
+{
+  "source_url": "https://oeis.org/A378258",
+  "posing_locator": "Comments: both conjectures, introduced in revision 2 on 3 December 2024",
+  "posing_version_url": "https://oeis.org/history/view?seq=A378258&v=2",
+  "coverage": [
+    {"item": "Comments: exclusion of residues 1 and 5 modulo 6", "status": "proved", "scope": "Every n>1 and every normalized rational solution", "proof": "Theorem 1; Sections 2 and 3", "problem_id": "oeis-a378258-hanna-mod-six"},
+    {"item": "Comments: odd coefficient iff the index is a power of two", "status": "proved", "scope": "Every n>=1 and every normalized rational solution", "proof": "Theorem 1; Section 2", "problem_id": "oeis-a378258-hanna-square-root-parity"},
+    {"item": "Comments: first negative coefficient at index 58", "status": "proved", "scope": "Exact finite check of all indices 1 through 58", "proof": "verify.py and verification.json"},
+    {"item": "Name and Formulas (1)-(6)", "status": "proved", "scope": "All degrees", "proof": "Sections 2 and 4"},
+    {"item": "Examples: A squared, A-A squared, B, C(5x)/5 and B composed with B", "status": "proved", "scope": "All-degree companion parity, signs and valuations; exact finite check of all displayed coefficients", "proof": "Corollary 1 and verify.py"},
+    {"item": "Cross-reference A000108: Catalan equation, binary parity and dyadic valuation", "status": "prior proof cited", "scope": "The offset-one coefficient c_n has v_2(c_n)=s_2(n)-1 for n>=1", "proof": "Deutsch and Sagan, arXiv:math/0407326v1, Theorem 2.1; Corollary 1 supplies the factorial deduction"},
+    {"item": "PARI coefficient program and linked b-file", "status": "proved", "scope": "All-degree triangular recurrence; exact finite b-file agreement through degree 80", "proof": "Section 5 and verification.json"},
+    {"item": "Other statements in the A000108 literature", "status": "not covered", "scope": "Outside the stated Catalan equation and coefficient valuation"}
+  ],
+  "additional_written_results": [
+    "For every even n>=2, a(n) is 3 modulo 6 at powers of two and 0 otherwise",
+    "For n>=2, [x^n](B composed with B)=-4c_n and [x^n]((A-A^2) composed with (A-A^2))=4*5^(n-2)c_n; both have dyadic valuation s_2(n)+1",
+    "For every integer t, q=1+4t gives a unique integral normalized solution; with M=abs(2t+1), every even-index coefficient is M modulo 2M at powers of two and 0 otherwise"
+  ],
+  "formal_statements": [
+    {"declaration": "D5.S1.Recurrence.Invariants.HannaA378258ModSix.result", "source_url": "https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258ModSix.lean", "scope": "Existence; for every rational A satisfying IsGF and every n>1, an integer coefficient representative whose residues modulo 6 are neither 1 nor 5"},
+    {"declaration": "D5.S1.Recurrence.Invariants.HannaA378258SquareRootParity.result", "source_url": "https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258SquareRootParity.lean", "scope": "Existence; for every rational A satisfying IsGF and every n>=1, an integer coefficient representative odd exactly when n is a power of two"}
+  ],
+  "formal_scope": "The two exported declarations concern the original parameter q=5. The stronger even-index congruences, companion results and parameter family have written proofs in note.tex.",
+  "finite_checks": {"original_through_degree": 80, "family_through_degree": 24, "family_t_values": [-3, -2, -1, 0, 1, 2, 3, 4, 5]},
+  "related_parity_argument": {"author": "hilbert-clavius", "date": "2026-10-25", "locator": "item 5, A378258", "source_url": "https://www.openwitness.net/p/10125"}
+}

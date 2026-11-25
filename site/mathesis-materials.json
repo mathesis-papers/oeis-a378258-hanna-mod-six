@@ -1,0 +1,11 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "oeis-a378258-hanna-mod-six",
+  "version": 2,
+  "repository_url": "https://github.com/mathesis-papers/oeis-a378258-hanna-mod-six",
+  "site_url": "https://papers.trureturing.org/oeis-a378258-hanna-mod-six/",
+  "doi": null,
+  "reading": {},
+  "slides": [],
+  "visualizations": []
+}

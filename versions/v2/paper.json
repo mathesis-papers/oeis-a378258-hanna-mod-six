@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 77437,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "fbdd4bca4bc1cd17205bd91316eb1ab9950aae3be073a89d22504bdc2a9d4745",
+      "sha256": "fbdd4bca4bc1cd17205bd91316eb1ab9950aae3be073a89d22504bdc2a9d4745"
+    },
+    "source": {
+      "bytes": 14395,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "d5ccf55d2736bf70441c6b1b06b6d8a35cfe7f474b4f53ca60a1e2c25dc3d57b",
+      "sha256": "d5ccf55d2736bf70441c6b1b06b6d8a35cfe7f474b4f53ca60a1e2c25dc3d57b"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We prove both conjectures in Paul D. Hanna's OEIS A378258, Comments (3 December 2024): its coefficients avoid residues 1 and 5 modulo 6 beyond degree one, and an odd coefficient occurs exactly at a power-of-two index. The normalized rational solution exists, is unique and has integer coefficients. An integral compositional square root gives parity; reflection modulo 3 gives the sharper even-index residues 3 at powers of two and 0 otherwise. The same construction treats every integer parameter q congruent to 1 modulo 4 replacing 5, and gives companion-series parity and exact dyadic valuations for compositional squares.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "01b573fd9b691a4be3a8b0ecbb41b3311eda19b5",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258ModSix.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 77437,
+      "sha256": "fbdd4bca4bc1cd17205bd91316eb1ab9950aae3be073a89d22504bdc2a9d4745",
+      "url": "/api/v1/collected-papers/oeis-a378258-hanna-mod-six/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-25T19:42:50.683229416Z",
+    "record": "oeis-a378258-hanna-mod-six",
+    "repository_name": "oeis-a378258-hanna-mod-six",
+    "source": {
+      "bytes": 14395,
+      "sha256": "d5ccf55d2736bf70441c6b1b06b6d8a35cfe7f474b4f53ca60a1e2c25dc3d57b",
+      "url": "/api/v1/collected-papers/oeis-a378258-hanna-mod-six/files/source?version=2"
+    },
+    "title": "Proof of the modulo-six and parity conjectures in OEIS A378258, Comments",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-25T19:42:50.683229416Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "oeis-a378258-hanna-mod-six"
+  }
+}

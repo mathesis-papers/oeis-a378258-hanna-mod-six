@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Proof of the modulo-six and parity conjectures in OEIS A378258, Comments"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-25"
+version: "2"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/oeis-a378258-hanna-mod-six?version=2"
+license: "CC-BY-4.0"
