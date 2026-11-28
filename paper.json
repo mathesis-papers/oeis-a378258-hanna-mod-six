@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.23965147",
     "current_version": 2,
     "doi": "10.5281/zenodo.23965149",
+    "kind": "note",
     "lean_source": {
       "revision": "01b573fd9b691a4be3a8b0ecbb41b3311eda19b5",
       "url": "https://github.com/the-omega-institute/trureturing/blob/01b573fd9b691a4be3a8b0ecbb41b3311eda19b5/D5/S1/Recurrence/Invariants/HannaA378258ModSix.lean"
@@ -55,10 +56,12 @@
     "title": "Proof of the modulo-six and parity conjectures in OEIS A378258, Comments",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-25T19:42:50.683229416Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "oeis-a378258-hanna-mod-six"
